@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardCustomerController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="800.0" style="-fx-background-color: #632c34;">
+         <children>
+            <Label layoutX="326.0" layoutY="33.0" text="Welcome" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="37.0" />
+               </font>
+            </Label>
+            <Pane layoutX="41.0" layoutY="10.0" prefHeight="100.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@restaurant-icon-png-4890.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="154.0" style="-fx-background-color: #efeecb;">
+         <children>
+            <Button fx:id="menuButton" layoutX="19.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #632c34;" text="Menu" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="reservationButton" layoutX="19.0" layoutY="82.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goReservation" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #632c34;" text="Reservation" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="logoutButton" layoutX="17.0" layoutY="416.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goLogin" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #632c34;" text="Log out" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <ScrollPane layoutX="154.0" layoutY="120.0" prefHeight="480.0" prefWidth="644.0">
+         <content>
+            <VBox fx:id="menuLayout" prefHeight="475.0" prefWidth="640.0">
+               <children>
+                  <Pane minHeight="40.0" prefHeight="40.0" prefWidth="474.0">
+                     <children>
+                        <Button fx:id="refreshButton" layoutX="8.0" layoutY="3.0" mnemonicParsing="false" onAction="#refresh" style="-fx-background-color: #632c34;" text="Refresh" textFill="WHITE" />
+                     </children>
+                  </Pane>
+               </children></VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
